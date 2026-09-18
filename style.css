@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #020618;
+
+  display: grid;
+
+  grid-template-areas:
+    "head head head"
+    "nav main sidebar"
+    "foot foot foot";
+
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 70px 1fr 100px;
+}
+
+.content {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 24px 16px;
+  border-radius: 3px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+header {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+
+  grid-area: head;
+}
+
+main {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+
+  grid-area: main;
+}
+
+nav {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+
+  grid-area: nav;
+}
+
+aside {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+
+  grid-area: sidebar;
+}
+
+footer {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+
+  grid-area: foot;
+}
